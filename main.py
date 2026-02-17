@@ -1,3 +1,19 @@
 import sqlite3
 
-print ("Hello")
+
+connection = sqlite3.connect('postfixlogparser.db')
+
+cursor = connection.cursor()
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS login (
+date TEXT,
+ip TEXT,
+username TEXT
+)
+''')
+
+
+connection.commit()
+
+connection.close()
