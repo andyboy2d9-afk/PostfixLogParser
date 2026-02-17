@@ -9,7 +9,8 @@ cursor.execute('''
 CREATE TABLE IF NOT EXISTS login (
 date TEXT,
 ip TEXT,
-username TEXT
+username TEXT,
+proto TEXT
 )
 ''')
 
